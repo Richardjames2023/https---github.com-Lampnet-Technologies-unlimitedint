@@ -1,0 +1,212 @@
+.footer{
+    background-color:#d5e8f2;
+    .wrapper{
+        padding: 0 30px 0;
+
+        @include breakpoints(Xlarge){
+            padding:0;
+        }
+
+        @include breakpoints(small){
+        width:26.875rem;
+        height:67.3125rem;
+        }
+            
+        .footer-content{
+            //padding: 0 3.75rem 0 3.75rem;
+            border-bottom:0.5px solid #444;
+
+            @include breakpoints(small){
+                width:26.875rem;
+                display:flex;
+                flex-direction: column;
+                padding: 0 1.875rem 0 1.875rem;
+            }
+            .flex{
+                @include breakpoints(small){
+                    width:26.875rem;
+                    flex-direction: column;
+                }
+                @include breakpoints(large){
+                    flex-wrap: wrap;
+                }
+            }
+            
+            .dec{
+                margin-top:4.6875rem;
+
+                @include breakpoints(small){
+                    margin-top:3.125rem;
+                }
+
+                .logo{
+                    width:6.6925rem; 
+                }
+
+                p{
+                    width:28.1875rem;
+                    margin-top:2.19625rem;
+                    font-weight:400;
+                    font-size:0.9375rem;
+                    color:#444;
+                    line-height:1.5rem;
+
+                    @include breakpoints(Xlarge){
+                        width:22.5rem;
+                    }
+
+                    @include breakpoints(small){
+                        width:23.125rem;
+                        font-size:0.875rem;
+                        margin:3.125rem 0 0;
+                    }
+                }
+
+            }
+
+            .about{
+                margin:4.6875rem 10.9375rem 3.875rem;
+
+                @include breakpoints(2Large){
+                    margin-left:6.75rem;
+                    margin-right:6.75rem;
+                }
+                @include breakpoints(Xlarge){
+                    margin-left:6.75rem;
+                    margin-right:6.75rem;
+                }
+
+                @include breakpoints(small){
+                    width:138px;
+                    margin:3.125rem 0 0 0 ;
+                }
+
+                h4{
+                    font-weight:700;
+                    font-size:1rem;
+                    line-height:2rem;
+
+                    @include breakpoints(small){
+                        margin:0;
+                    }
+                }
+                .abt-items{
+                    margin-top:1.5625rem;
+
+                    @include breakpoints(small){
+                        margin-top:1.5625rem ;
+                    }
+
+                    a{
+                        width:8.625rem;
+                        display:block;
+                        margin-top:0.9375rem;
+                        font-weight:400;
+                        font-size:0.875rem;
+                        line-height:1.75rem;
+                        color:#444;
+                        cursor:pointer;
+                    }
+                }
+            }
+
+            .contact_us{
+                width:23.75rem;
+                margin:4.6875rem 0 3.875rem;
+
+                
+                @include breakpoints(large){
+                    margin-top:0;
+                    transform:translateX(120%);
+                }
+                @include breakpoints(small){
+                    margin:3.125rem 0 0;
+                }
+
+                h4{
+                    font-weight:700;
+                    font-size:1rem;
+                    line-height:2rem;
+
+                    
+                    @include breakpoints(small){
+                        margin:0;
+                    }
+                }
+
+                a{
+                    display:flex;
+                    align-items: center;
+                    
+                    font-weight:400;
+                    font-size: 0.875rem;
+                    line-height:1.75rem;
+                    color:#444;
+                    cursor:pointer;
+
+                    @include breakpoints(small){
+                        margin-top:1.5625rem;
+                        justify-content: space-between;
+                    }
+
+                    .ct-us{
+                        display:inline-block;
+                        color:#444;
+
+                        @include breakpoints(small){
+                            width:20.825rem;
+                        }
+                    }
+
+                    img{
+                        width:15px;
+                        height:15px;
+                        margin-right:0.675rem;
+
+                        @include breakpoints(small){
+                            height:0.9375rem;
+                        }
+                    }
+                }
+            }
+
+            .socials{
+                position:relative;
+                top:-85px;
+                border:1px solide red;
+                
+        
+                @include breakpoints(small){
+                    width:430px;
+                    margin-top:3.125rem;
+                    position:initial;
+                }
+        
+                img{
+                    margin-right:2.4375rem;
+                    
+        
+                    @include breakpoints(small){
+                    width:22px;
+                        height:22px;
+                        margin-bottom:3.1255rem;
+                    }
+                }
+            }
+
+        }
+
+
+        .copyright{
+            text-align:center;
+            padding: 3.125rem 0 ;
+
+            p{
+                font-weight:400;
+                font-size: 0.875rem;
+                line-height:1.75rem;
+                color:#444;
+            }
+        }
+    }
+}

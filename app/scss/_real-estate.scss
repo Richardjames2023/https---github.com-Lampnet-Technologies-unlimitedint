@@ -1,0 +1,666 @@
+
+.real-estate-hero{
+    overflow: hidden;
+
+    .slider{
+        width:100%;
+        height: 550px;
+        position:relative;
+
+        .sliding-img{
+            width:100%;
+            height: 550px;
+            position:absolute;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 44.37%, rgba(0, 0, 0, 0) 88.26%);
+            transition:transform 2s ease-in;
+            animation:sliderZoomEffect 12s linear infinite;
+
+            &:first-child{
+                z-index: 2;
+            }
+            &:nth-child(2){
+                z-index: 1;
+            }
+            &:nth-child(3){
+                z-index: 0;
+            }
+
+            
+            @include keyframes(sliderZoomEffect){
+                0%{
+                transform:scale(1);
+                
+                }
+                50%{
+                    transform:scale(1.1);
+                    }
+                100%{
+                    transform:scale(1.2);
+                }
+            }
+
+            
+        }
+
+        p{
+            width:47.125rem;
+            position:absolute;
+            margin:10.625rem 0 0 3.75rem;
+            font-weight:700;
+            font-size:2.5rem;
+            line-height:4.5rem;
+            color:$whiteColor;
+            background-color: transparent;
+            z-index: 9;
+
+        
+            @include breakpoints(medium){
+                width: 37.5rem;
+                height:43.75rem;
+                margin:50px 120px 0;
+                font-size:35px;
+                //border:1px solid red;
+            }
+
+            @include breakpoints(small){
+                min-width: 28.875rem;
+                min-height:43.75rem;
+                margin:62px 20px 0;
+                //padding-left:40px;
+                font-size:35px;
+            }
+            
+            @include breakpoints(sXmall){
+                width:23.125rem;
+                height:29.625rem;
+                margin:62px 30px 0;
+                font-size:25px;
+            }
+        } 
+
+    
+    }
+
+}
+
+.real-estate-services{
+    overflow:hidden;
+
+    .wrapper{
+        
+        @include breakpoints(2Large){
+            padding:0;
+        }
+
+        @include breakpoints(Xlarge){
+            padding-right:0;
+            padding-left:0;
+        }
+
+        .wrapper-content{
+            padding: 0 1.875rem 0 1.875rem;
+
+            @include breakpoints(Xlarge){
+                padding-right:0;
+                padding-left:0;
+            }
+
+            .sticky {
+                position: fixed;
+                top:40%;
+                transform:translateY(-30%);
+            }
+    
+            .left{
+                width:200px;
+
+                .dropdown{
+                    margin-top:9.625rem;
+                
+                    &__curve{
+                        border-radius:10px 10px 0 0;
+                    }
+    
+                    .mydropdown{
+                        width:12.475rem;
+                        display:flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding:15px 10px 15px 10px;
+                        color:#1367A3;
+                        background:linear-gradient(0deg, rgba(213, 232, 242, 0.5), rgba(213, 232, 242, 0.5));
+                        border-bottom:1px solid #fff;
+    
+                        span{
+                            width:9.4375rem;
+                            display:inline-block;
+                            font-weight:300;
+                            font-size:0.875rem;
+                        }
+    
+                        img{
+                            width:14px;
+                            height:14px;
+                        }
+                    }
+                    .activate{
+                        color:#fff;
+                        background-color:#23B9E3;
+                    }
+                }
+            }
+    
+            .right{
+                margin-left:3.625rem;
+                display:inline-block;
+
+                @include breakpoints(Xlarge){
+                    margin-left:2.9rem;
+                }
+    
+                h2{
+                    margin:3.125rem 0 0 16.75rem;
+                    font-weight:500;
+                    font-size: 1.875rem;
+                    line-height:3.375rem;
+                }
+                .right-content{
+                    margin-top:3.125rem;
+                    padding-bottom:6.25rem;
+    
+                   & > p{
+                       width:58.5rem;
+                       margin-top:4.625rem;
+                       font-weight:400;
+                       font-size:1rem;
+                       line-height:2.25rem;
+                       
+                       @include breakpoints(Xlarge){
+                        width:47.6rem;
+                        margin-top:3.7rem;
+                       }
+                    }
+    
+                    .right-content-img{
+                        width:59.375rem;
+                        height:43.75rem;
+                        margin-top:3.125rem;
+                        text-align:center;
+                        border-radius: 10px;
+
+                        @include breakpoints(Xlarge){
+                            width:47.5rem;
+                            height:35rem;
+                        }
+                        @include breakpoints(large){
+                            width:526.4px;
+                        }
+    
+                        .right-content-overlap{
+    
+                            h3{
+                                margin-bottom:0;
+                                font-weight:700;
+                                font-size:1.5rem;
+                                line-height:3rem;
+                                color:#fff;
+                            }
+    
+                            p{
+                                margin-top:0;
+                                font-weight:500;
+                                font-size:0.9375rem;
+                                line-height:2.10625rem;
+                                color:#fff;
+                            }
+                            form{
+                                margin:1.125rem 11rem 6.25rem;
+                                padding:3.125rem 2.5rem  2.125rem;
+                                border-radius:25px;
+                                background-color: #fff;
+
+                                @include breakpoints(Xlarge){
+                                    margin-top:1rem;
+                                    margin-left:8.8rem;
+                                    margin-right:8.8rem;
+                                    padding-left:2rem;
+                                    padding-right:2rem;
+                                    padding-bottom: 2rem;
+                                }
+                                
+                                .form-container{
+    
+                                    input, textarea{
+                                        width:500px;
+                                        height:60px;
+                                        border:0.5px solid #94a3b1;
+                                        border-radius: 5px;
+                                        margin-top:25px;
+                                        outline:none;
+                                        color:#94a3b1;
+
+                                        @include breakpoints(Xlarge){
+                                            width:400px;
+                                            height:48px;
+                                            margin-top:10px;
+                                        }
+                                    }
+    
+                                    textarea{
+                                        height:100px;
+                                        @include breakpoints(Xlarge){
+                                            height:96px;
+                                        }
+                                    }
+    
+                                    .btn-submit{
+                                        width:350px;
+                                        margin-top:40px;
+                                        @include breakpoints(Xlarge){
+                                            margin-top:10px;
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+    
+                    .local-expertise{
+                        width:59.375rem;
+                        margin-top:6.25rem;
+                        position:relative;
+                        overflow: hidden;
+
+                        @include breakpoints(Xlarge){
+                            width:47.5rem;
+                        }
+                    
+                        &::before{
+                            content: "";
+                            width:69.375rem;
+                            height:107.625rem;
+                            position:absolute;
+                            top:148px;
+                            background-color:#fafafa;
+                            border-radius:20px;
+                            color:#fafafa;
+                            opacity:1;
+                            z-index:-1;
+
+                            @include breakpoints(Xlarge){
+                                width:47.5rem;
+                            }
+                        }
+                        .mission{
+                            margin:3.6875rem 2.8125rem 0 0;
+
+                            @include breakpoints(Xlarge){
+                                margin-top:2.95rem;
+                                margin-bottom: 2.25rem;
+                            }
+                    
+                            h4{
+                                font-weight:500;
+                                font-size:1.6875rem;
+                                line-height:48.6px;
+
+                                @include breakpoints(Xlarge){
+                                    font-weight: 400;
+                                    font-size: 1.35rem;
+                                    line-height: 38.88px;
+                                }
+                            }
+                    
+                            p{
+                                width:29.9375rem;
+                                font-weight:400;
+                                font-size:14px;
+                                line-height:31.5px;
+
+                                @include breakpoints(Xlarge){
+                                    width:23.95rem;
+                                    line-height: 25.2px;
+                                }
+                            }
+                        }
+                        .mission-img{
+                            position:relative;
+                            img{
+                                width:21.1875rem;
+                                position:absolute;
+                                top:0;
+                                left:0;
+
+                                @include breakpoints(Xlarge){
+                                    width:16.95rem;
+                                }
+                                &:nth-child(1){
+                                    animation:img-slide-bkw 9s infinite;
+
+                                    @include keyframes(img-slide-bkw){
+                                        0%{
+                                            transform:translateX(0px);
+                                            top:145px;
+                                        }
+                                        10%{
+                                            transform:translateX(88px);
+                                            top:145px;
+                                           
+                                        }
+                                       
+                                        50%{
+                                            transform:translateX(88px);
+                                            top:145px;
+                                           
+                                        }
+                                        51%{
+                                            transform:translateY(0);
+                                        }
+                                        70%{
+                                            transform:translateX(0px);
+                                            top:-1px; 
+                                            z-index:1;
+                                        }
+                                        100%{
+                                            transform:translateX(0px);
+                                            top:-1px;
+                                            z-index:1;
+                                        }
+
+                                    }
+
+                                }
+                    
+                                &:last-child{
+                                    top:145px;
+                                    left:88px;
+                                    animation:img-slide 9s infinite;
+
+                                    @include keyframes(img-slide){
+                                        0%{
+                                            transform:translateY(0);
+                                        }
+                                        10%{
+                                            transform:translateX(-88px);
+                                            top:-1px; 
+                                        }
+                                       
+                                        50%{
+                                            transform:translateX(-88px);
+                                            top:-1px;
+                                        }
+                                        51%{
+                                            transform:translateX(0px);
+                                        }
+                                        70%{
+                                            transform:translateX(0px);
+                                            top:145px;
+                                        }
+                                        100%{
+                                            transform:translateX(0);
+                                            top:145px;
+                                        }
+
+                                    }
+
+                                    @include breakpoints(Xlarge){
+                                        top:116px;
+                                        left:52px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .inspire{
+                        margin-top:6.25rem;
+
+                        @include breakpoints(Xlarge){
+                            margin-top:5rem;
+                        }
+                        .inspire-content{
+                            width:35.125rem;
+                            height:7.25rem;
+                            position:relative;
+                            left:263px;
+                            text-align:center;
+
+                            @include breakpoints(Xlarge){
+                               left:110.4px;
+                               
+                            }
+                    
+                            h5{
+                                width:9.875rem;
+                                position:relative;
+                                left:12.625rem;
+                                font-weight:500;
+                                font-size:1.6875rem;
+                            }
+                    
+                            p{
+                                font-weight:400;
+                                font-size:0.875rem;
+                                line-height:1.96875rem;
+                                
+                                
+                                @include breakpoints(Xlarge){
+                                    font-weight: 300;
+                                }
+                            }
+                    
+                        }
+                        .inspire-slider{
+                            .slide-box{
+                                width:67rem;
+                                height:12.5rem;
+                                margin:4.6875rem 0 0 0.125rem;
+
+                                @include breakpoints(Xlarge){
+                                    width:53.6rem;
+                                    margin:3.75rem 0 0 0.1rem;
+                                }
+    
+                                img{
+                                    width:300px;
+                                    margin-right:1.25rem;
+                                    transition: transform .3s linear;
+
+                                    @include breakpoints(Xlarge){
+                                        width:240px;
+                                        margin-right:1rem;
+                                    }
+                                }
+                            }
+    
+                            .click-img{
+                                width:90px;
+                                margin-top:3.125rem;
+                                transform:translateX(865px);
+                                text-align:center;
+
+                                @include breakpoints(Xlarge){
+                                    margin-top:2.5rem;
+                                    transform:translateX(670.4px);
+                                }
+                                
+    
+                                img{
+                                    width:35px;
+                                    height:35px;
+                                    margin-right:15px;
+                                    cursor: pointer;
+
+                                    &:hover{
+                                        border:1px solid lightgray;
+                                    }
+    
+                                    &:not(:last-child){
+                                        margin-right:0;
+                                    }
+    
+                                }
+                            }
+                        }
+                    }
+    
+                    .life-style{
+                        margin:6.25rem 0 ;
+                        text-align:center;
+
+                        @include breakpoints(Xlarge){
+                            margin:5rem 0;
+                        }
+    
+                        .life-style-content{
+                            h5{
+                                font-weight:400;
+                                font-size:1.35rem;
+                            }
+    
+                            p{
+                                font-weight:400;
+                                font-size:14px;
+                            }
+                        }
+                        .life-style-card{
+                            
+                           
+                            .life-style-cards{
+                                width:18.8125rem; //301px
+                                margin:4.6875rem 0 0 1.1875rem;
+
+                                @include breakpoints(Xlarge){
+                                    width:15.05rem;
+                                    margin:3.75rem 0 0 0.95rem;
+                                }
+
+    
+                                &:nth-child(1){
+                                    margin-top:160px;
+                                    margin-left:2px;
+                                    animation: style-card 7s infinite;
+
+                                    @include keyframes(style-card){
+                                        0%{
+                                            transform:translateY(0px);
+                                        }
+                                        25%{
+                                            transform:translateY(-70px);
+                                        }
+                                        50%{
+                                            transform:translateY(-70px);
+                                        }
+                                        100%{
+                                            transform:translateY(0px);
+                                        }
+                                    }
+                                }
+                                &:nth-child(2){
+                                    animation: style-card-two 7s infinite;
+
+                                    @include keyframes(style-card-two){
+                                        0%{
+                                            transform:translateY(0px);
+                                        }
+                                        25%{
+                                            transform:translateY(70px);
+                                        }
+                                        50%{
+                                            transform:translateY(70px);
+                                        }
+                                        100%{
+                                            transform:translateY(0px);
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(3){
+                                    margin-top:160px;
+                                    animation: style-card 7s infinite;
+
+                                    @include keyframes(style-card){
+                                        0%{
+                                            transform:translateY(0px);
+                                        }
+                                        25%{
+                                            transform:translateY(-70px);
+                                        }
+                                        50%{
+                                            transform:translateY(-70px);
+                                        }
+                                        100%{
+                                            transform:translateY(0px);
+                                        }
+                                    }
+                                }
+                                
+    
+                                img{
+                                    width:300px;
+                                    height:300px;
+
+                                    @include breakpoints(Xlarge){
+                                        width:240px;
+                                        height:240px;
+                                    }
+                                }
+        
+                                .life-style-cards-body{
+                                    h6{
+                                        font-weight:500;
+                                        font-size:1.25rem;
+
+                                        @include breakpoints(Xlarge){
+                                            font-size:1rem;
+                                            margin-top:1rem;
+                                            margin-bottom:1rem;
+                                        }
+        
+                                    }
+                                    p{
+                                        font-weight:400;
+                                        font-size:14px;
+                                        line-height:31.5px;
+
+                                        @include breakpoints(Xlarge){
+                                            font-weight:300;
+                                            margin-top:1rem;
+                                            line-height: 25.2px;
+                                        }
+                                    }
+                                    a{
+                                        width:108px;
+                                        display:inline-block;
+                                        font-weight:600;
+                                        font-size:15px;
+                                        line-height:18.5px;
+                                        color:#23b9e3;
+                                        text-align: center;
+
+                                        @include breakpoints(Xlarge){
+                                            font-size:12px;
+                                            font-weight:500;
+                                        }
+                                        img{
+                                            width:20px;
+                                            height:10px;
+
+                                            @include breakpoints(Xlarge){
+                                                width:10px;
+                                                height:10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+        
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+
+}

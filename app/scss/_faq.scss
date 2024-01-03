@@ -1,0 +1,138 @@
+
+.faq-hero{
+    overflow:hidden;
+    &__items{
+
+        background-image: url("../../images/Rectangle-12093.png");
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position: 70% 70%;
+        height:31.25rem; //height: 46.875rem;
+        position:relative;
+
+        @include breakpoints-down(small){
+            min-width: 28.875rem;
+        }
+
+        .text{
+            //padding:2.125rem 3.75rem;
+            margin:3.125rem 0 0 216px;
+            height:264px;
+            text-align:center;
+
+            @include breakpoints-down(small){
+                padding: 0 1.875rem;
+            }
+
+            h1{ 
+                
+                font-size:2.5rem;
+                font-weight: 600;
+                margin:3.125rem 0 0;
+
+                @include breakpoints-down(small){ 
+                     //width: 21.875rem;
+                     height: 19.6875rem;
+                     font-size:2.1875rem;
+                     font-weight:500;
+                    
+                 }
+
+            }
+            h4{
+                font-weight:600;
+                font-size:30px;
+                margin:3.125rem 0 0;
+            }
+
+            p{
+                //width:43.6875rem;
+                margin-bottom:2rem;
+                font-size:1rem;
+                font-weight: 400;
+
+                @include breakpoints-down(small){
+                    width:21.875rem;
+                    height:9rem;
+                }
+            }
+
+          
+        }
+
+    }
+}
+.faq-review{
+    .container{
+        padding: 0 3.75rem 25.5625rem 3.75rem;
+        .faq{
+            text-align:center;
+
+            h5{
+                width:14.4375rem;
+                margin-top:6.25rem;
+                padding:0.3125rem 6.25rem;
+                position:relative;
+                top:0;
+                left:50%;
+                transform:translateX(-50%);
+                font-weight:400;
+                font-size:1rem;
+                line-height:2.25rem;
+                background-color:#d5e8f2;
+                border-radius:26px;
+            }
+
+            .faq-content{
+                margin-top:6.25rem;
+
+                .faqa-questions{
+                    margin-top:0.8125rem;
+                    margin-right:1.875rem;
+
+                    .dropdown{
+                        margin-bottom:2.1875rem;
+                        border-bottom: 0.5px solid #23b9e3;
+
+                        .drop-title{
+                          margin-bottom:1.25rem;
+                          margin-right:3rem;
+                          font-weight:400;
+                          font-size:1.125rem;
+                          line-height: 2.53125rem; 
+                          color:#444; 
+
+                        }
+
+                        img{
+                            width:23px;
+                            height:23px;
+                            color:#444;
+                        }
+
+                    }
+                }
+
+                .faq-img{
+                    width:550px;
+                    margin-bottom:8.625rem;
+                    text-align:center;
+                    position:relative;
+
+                    h6{
+                        font-weight:600;
+                        font-size:2.5rem;
+                        position:absolute;
+                        top:25%;
+                        left:50%;
+                        transform:translateX(-50%);
+                    }
+
+                    img{
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
+}

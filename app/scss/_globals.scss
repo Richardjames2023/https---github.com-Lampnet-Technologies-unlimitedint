@@ -1,0 +1,127 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: $font-medium;
+    font-weight: 500;
+    color:$blackColor;
+    line-height: 1.3;
+    overflow-x: hidden;
+
+    @include breakpoints(medium){
+        //overflow: hidden;
+    }
+    @include breakpoints(small){
+        overflow: hidden;
+    }
+
+    &.no-scroll{
+        overflow: hidden;
+    }
+    
+}
+
+a, a:visited, a:hover{
+    text-decoration: none;
+}
+span{
+    color:$fadedBlue;
+}
+
+//spacing
+.row-space{
+    padding-left:2.20rem;
+    padding-right:2.20rem;
+}
+
+//container style
+
+.container{
+    max-width: 1536px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+
+    @include breakpoints(2Large){
+        max-width: 1280px;
+    }
+
+    @include breakpoints(Xlarge){
+        max-width: 1024px;
+    }
+
+    @include breakpoints(large){
+        max-width: 768px;
+    }
+
+    @include breakpoints(medium){
+        max-width: 640px;
+    }
+
+    @include breakpoints(small){
+        max-width: 475px;
+    }
+
+    @include breakpoints(Xsmall){
+        max-width: 100%;
+    }
+}
+
+//flex-box styles
+.flex{
+    display:flex;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    &-jc-c{
+        justify-content: center;
+    }
+
+    &-ai-c{
+        align-items: center;
+    }
+}
+//Button
+button, .button{
+    padding:0.875rem 1.5625rem;
+    background-color: $fadedBlue;
+    border:0;
+    border-radius: 26px;
+    color:$whiteColor; 
+    cursor:pointer;
+}
+
+//visibility
+.hide-for-mobile{
+    // hide for tablets and mobile divies
+    @include breakpoints-down(medium){
+        display:none;
+    }
+}
+
+.hide-for-desktop{
+    //hide for desktop viewport width
+    @include breakpoints-up(large){
+        display:none;
+    }
+}
+
+//divider line
+.divider{
+    width:43.75rem;
+    height:0.0625rem;
+    margin:3.125rem auto 3.125rem auto;
+    background-color: $fadedBlue;
+}
+
