@@ -1,5 +1,6 @@
 html{
     font-size: 100%;
+    height:-webkit-fill-available;
     box-sizing: border-box;
 }
 *, *::before, *::after{
@@ -9,6 +10,7 @@ html{
 body{
     margin: 0;
     padding: 0;
+    height:-webkit-fill-available;
     font-family: 'Inter', sans-serif;
     font-size: $font-medium;
     font-weight: 500;
@@ -20,7 +22,7 @@ body{
         //overflow: hidden;
     }
     @include breakpoints(small){
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     &.no-scroll{

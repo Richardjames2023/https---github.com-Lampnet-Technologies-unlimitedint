@@ -34,7 +34,7 @@ const createFooter = () => {
                 </div>
 
                 <div class="copyright">
-                    <p>&copy 2023 Copyright UNLIMITED INTERNATIONAL. All rights reserved</p>
+                    <p>&copy  <span id="copyright-year" style="color:#444;"></span> UNLIMITED INTERNATIONAL. All rights reserved</p>
                 </div>
             </div>
         </div>
