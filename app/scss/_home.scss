@@ -1250,6 +1250,7 @@
             }
 
             .globe{
+                width:34.375rem;
                 height:31.25rem;
                 margin-top:3.6875rem;
 
@@ -1264,23 +1265,40 @@
                 .elipse{
                     width:34.375rem;
                     height:31.25rem;
-                    display:inline-block;
+                    //width:1000px;
+                    //display:flex;
                     position: relative;
+                    overflow: hidden;
+                    //border:2px solid green;
 
                     @include breakpoints(Xlarge){
                         width:27.5rem;
                         height:25rem;
                     }
+                    .elipse-container{
+                        width:1000px;
+                        display:flex;
+                        //border:1px solid red;
 
-                    img{
-                        width:100%;
-                        height:100%;
-                        border-radius:20px;
+                        img{
+                            width:550px;
+                            height:500px;
+                            margin-right: 20px;;
+                            border-radius:20px;
+                        }
                     }
+                    .sliding-transition {
+                        transition: transform 0.5s ease-in-out;
+                      }
+                      
+
                 }
             }
 
         }
+        // .globe-container{
+        //     overflow: hidden;
+        // }
 
         .slider-card{
             margin-top: 3.125rem;

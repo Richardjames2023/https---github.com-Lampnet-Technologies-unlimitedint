@@ -22,6 +22,7 @@ hamburgerBtn.addEventListener("click", function(){
     }
 })
 
+
 //Appoiment form display
 const Appointment = document.querySelector('#appointment');
 const Popup = document.querySelector('#popup');
@@ -33,6 +34,17 @@ Appointment.addEventListener("click", function(){
         Popup.classList.add('appointmentActive');  
     }
 })
+
+// footer current year
+window.addEventListener('load', (
+    function () {
+        document.getElementById('copyright-year').appendChild(
+            document.createTextNode(
+                new Date().getFullYear()
+            )
+        );
+    }
+));
 
 
 // //fading opacity slider
@@ -57,31 +69,62 @@ function changeSlide(){
 
 //sidebar menu selection
 const activePage = window.location.pathname;
-const myDropDown = document.getElementById("myDropDown");
-const navLinks = myDropDown.querySelectorAll('.mydropdown');
-
-navLinks.forEach(link =>{
-    if(link.href.includes(`${activePage}`)){
-        link.classList.add('activate');
+//const myDropDown = document.getElementById("myDropDown-menu");
+const navLinks = document.querySelectorAll('.dropdown-menu');
+navLinks.forEach(links =>{
+    if(links.href.includes(`${activePage}`)){
+        links.classList.add('activate');
     }
 })
 
- //geting scroll position of an element
-window.onscroll = function(){getPositionElem()}
+//first home page carousel
+const imageContainer = document.querySelector('.elipse-container');
+const Images = document.querySelectorAll('.elipse-slid-images');
+let imageWidth = 500; //Images[0].getBoundingClientRect;
+let prevIndex;
+let CurrentActiveImage = 0;
+let totalImages = Images.length;
+
+setInterval(function slideImages(){
+    imageContainer.classList.add("sliding-transition");
+    prevIndex = CurrentActiveImage;
+    CurrentActiveImage = (CurrentActiveImage + 1) % totalImages;
+    imageContainer.style.transform = `translateX(-${imageWidth}px)`;
+    //imageContainer.style.transform = `translateX(${100 * ( - CurrentActiveImage)}px)`;
+
+    setTimeout(() => {
+        imageContainer.appendChild(Images[prevIndex]);
+        imageContainer.classList.remove("sliding-transition");
+        imageContainer.style.transform = "";
+      }, 500);
+}, 2000);
 
 
- function getPositionElem(){
-     
-    let mChange = document.querySelector("#myDropDown");
-    let sticky = mChange.offsetTop;
 
-    if(window.pageYOffset >= sticky){
-        mChange.classList.add('sticky');
-    }
-    else{
-        mChange.classList.remove('sticky');
-    }
-}
+
+//  //geting scroll position of an element
+
+//  function getPositionElem(){
+    let Left = document.querySelector('.left');
+    let dropPosition = document.querySelector("#myDropDown");
+
+    window.addEventListener('scroll', function(){
+        let scrollTop = window.scrollY; //scroll position
+        let viewHeight =  window.innerHeight; // viewport height
+        let contentHeight = dropPosition.getBoundingClientRect().height;
+
+        if(scrollTop >= contentHeight - viewHeight){
+            dropPosition.classList.add('sticky');
+        }
+        if(scrollTop <= dropPosition.offsetTop){
+            dropPosition.classList.remove('sticky');
+        }
+        if(scrollTop > (dropPosition.offsetTop + dropPosition.offsetHeight + 3300)){// checked the offset bottom
+            dropPosition.classList.remove('sticky');
+        }
+    })
+
+//}
 
 // //carousel image slider
 const images = document.querySelectorAll('.slide-item');
@@ -114,7 +157,6 @@ prev.addEventListener("click", function(){
         image.style.transform =`translateX(${10 * (indx - currentIndex)}px)`;
     })
 })
-
 
 
 
