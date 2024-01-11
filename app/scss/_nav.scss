@@ -7,23 +7,31 @@
         .nav-container{
             padding:2.125rem 0 2.13375rem;
 
+            @include breakpoints(2large){
+                width:1280x;
+                padding:2.125rem 0 ;
+            }
             @include breakpoints(Xlarge){
+                width:1024px;
                 padding:2.125rem 0 ;
             }
             @include breakpoints(large){
-                //padding:2.125rem 0 ;
+                width:780px;
                 height:81px;
             }
             @include breakpoints(medium){
+                width:640px;
                //border:1px solid red;
             }
     
             @include breakpoints(small){
+                width:475px;
                 //padding:0 ;
                 height:81px;
             }
     
             @include breakpoints(Xsmall){
+                width:100%;
                 //padding:0 1.875rem ;
                 height:81px;
             }

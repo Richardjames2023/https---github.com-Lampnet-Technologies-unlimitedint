@@ -105,13 +105,14 @@ setInterval(function slideImages(){
 //  //geting scroll position of an element
 
 //  function getPositionElem(){
-    let Left = document.querySelector('.left');
+    let rightContainer = document.querySelector('.right');
     let dropPosition = document.querySelector("#myDropDown");
 
     window.addEventListener('scroll', function(){
         let scrollTop = window.scrollY; //scroll position
         let viewHeight =  window.innerHeight; // viewport height
         let contentHeight = dropPosition.getBoundingClientRect().height;
+        let  rightContainerHeight = rightContainer.offsetHeight;
 
         if(scrollTop >= contentHeight - viewHeight){
             dropPosition.classList.add('sticky');
@@ -119,7 +120,7 @@ setInterval(function slideImages(){
         if(scrollTop <= dropPosition.offsetTop){
             dropPosition.classList.remove('sticky');
         }
-        if(scrollTop > (dropPosition.offsetTop + dropPosition.offsetHeight + 3300)){// checked the offset bottom
+        if(scrollTop > ( rightContainerHeight)){// checked the offset bottom
             dropPosition.classList.remove('sticky');
         }
     })

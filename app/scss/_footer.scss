@@ -8,8 +8,8 @@
         }
 
         @include breakpoints(small){
-        width:26.875rem;
-        height:67.3125rem;
+            width:26.875rem;
+            height:67.3125rem;
         }
             
         .footer-content{
@@ -23,12 +23,15 @@
                 padding: 0 1.875rem 0 1.875rem;
             }
             .flex{
+                @include breakpoints(large){
+                    flex-wrap: wrap;
+                }
+                @include breakpoints(medium){
+                    //display:inline-block;
+                }
                 @include breakpoints(small){
                     width:26.875rem;
                     flex-direction: column;
-                }
-                @include breakpoints(large){
-                    flex-wrap: wrap;
                 }
             }
             
@@ -54,6 +57,10 @@
                     @include breakpoints(Xlarge){
                         width:22.5rem;
                     }
+                    @include breakpoints(medium){
+                        width:16.5rem;
+                        font-weight:300;
+                    }
 
                     @include breakpoints(small){
                         width:23.125rem;
@@ -74,6 +81,9 @@
                 @include breakpoints(Xlarge){
                     margin-left:6.75rem;
                     margin-right:6.75rem;
+                }
+                @include breakpoints(medium){
+                    margin-left:2rem;
                 }
 
                 @include breakpoints(small){
@@ -118,6 +128,10 @@
                 @include breakpoints(large){
                     margin-top:0;
                     transform:translateX(120%);
+                }
+                @include breakpoints(medium){
+                    margin-top:0;
+                    transform:translateX(80%);
                 }
                 @include breakpoints(small){
                     margin:3.125rem 0 0;

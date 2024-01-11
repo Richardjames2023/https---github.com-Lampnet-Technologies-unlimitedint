@@ -18,9 +18,9 @@ body{
     line-height: 1.3;
     overflow-x: hidden;
 
-    @include breakpoints(medium){
-        //overflow: hidden;
-    }
+    // @include breakpoints(medium){
+    //     overflow-x: hidden;
+    // }
     @include breakpoints(small){
         overflow-x: hidden;
     }
@@ -63,6 +63,8 @@ span{
 
     @include breakpoints(large){
         max-width: 768px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     @include breakpoints(medium){

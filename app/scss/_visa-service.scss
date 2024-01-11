@@ -6,6 +6,10 @@
             height: 550px;
             position:relative;
 
+            @include breakpoints(medium){
+               height:280px;
+            }
+
             .sliding-img{
                 position:absolute;
                 transition:transform 2s ease-in;
@@ -16,7 +20,16 @@
                 }
                 &:nth-child(2){
                     z-index: 0;
-                }     
+                } 
+
+                @include breakpoints(medium){
+                    object-fit: contain;
+                    max-width:100%;
+                    max-height:300px;
+                    width:auto;
+                    height:auto;
+                }
+                
             }
     
             p{
@@ -30,6 +43,14 @@
                 color:#fff;
                 z-index: 9;
 
+                @include breakpoints(medium){
+                    width:37.7rem;
+                    margin:5.15rem 0 0 2rem;
+                    font-weight:600;
+                    font-size:2rem;
+                    line-height: 3.6rem;
+                }
+
            }
 
         
@@ -41,7 +62,7 @@
 .tourist-visa{
   
     .wrapper{
-
+        //border:1px solid green;
         @include breakpoints(2Large){
             padding:0;
         }
@@ -50,9 +71,13 @@
             padding-right:0;
             padding-left:0;
         }
+        @include breakpoints(medium){
+            //border:2px solid black;
+        }
 
         .wrapper-content{
-            padding: 0 1.875rem 0 1.875rem;
+            //padding: 0 1.875rem 0 1.875rem;
+            //border:1px solid red;
 
             @include breakpoints(Xlarge){
                 padding-right:0;
@@ -101,9 +126,14 @@
     
             .right{
                 margin-left:3.625rem;
+                //border:1px solid black;
     
                 @include breakpoints(Xlarge){
                     margin-left:2.9rem;
+                }
+    
+                @include breakpoints(medium){
+                    margin-left:1.45rem;
                 }
     
                 h2{
@@ -111,10 +141,24 @@
                     font-weight:500;
                     font-size: 1.875rem;
                     line-height:3.375rem;
+
+                    @include breakpoints(large){
+                        margin:2.5rem 0 0 13.4rem;
+                        font-size: 1.5rem;
+                        line-height: 2.7rem;
+                    }
+                    @include breakpoints(medium){
+                        margin-left:10.72rem;
+                    }
                 }
                 .right-content{
                     margin-top:3.125rem;
                     padding-bottom:6.25rem;
+
+                    @include breakpoints(large){
+                        margin-top:2.5rem;
+                        padding-bottom:5rem;
+                    }
     
                     p{
                        max-width:63.25rem;
@@ -126,6 +170,13 @@
 
                        @include breakpoints(Xlarge){
                         margin-top:3.7rem;
+                       }
+                       @include breakpoints(large){
+                        margin-top:2.96rem;
+                       }
+                       @include breakpoints(medium){
+                        font-weight:300;
+                        line-height:1.8rem;
                        }
                     }
     
@@ -142,11 +193,14 @@
 
                         }
                         @include breakpoints(large){
-                            width:35.625rem;
+                            width:32.0625rem;
                             height:26.25rem;
 
                         }
     
+                        @include breakpoints(medium){
+                            width:25.65rem;
+                        }
                         .right-content-overlap{
                             @include breakpoints(large){
                                 padding-top:25%;
@@ -279,6 +333,17 @@
                                 font-size:1rem;
                                 margin-left:15px;
                                 color:#fff;
+
+                                @include breakpoints(large){
+                                    width:450px;
+                                    font-size:0.875rem;
+                                    margin-left:0.75rem;
+                                }
+                                @include breakpoints(medium){
+                                    width:350px;
+                                    font-size:0.765rem;
+    
+                                }
                             }
                         }
                     }

@@ -4,7 +4,7 @@ const createHeaderNav = () => {
     header.innerHTML = `
         <nav>
             <div class="menu-overlay has-fade"></div>
-            <div class=" nav-container flex flex-jc-sb flex-ai-c container" style="width:90%">
+            <div class=" nav-container flex flex-jc-sb flex-ai-c container">
                 <a href="/" class="header__logo">
                     <img src="images/Group-75.png" alt="Unlimited-solutions">
                 </a>
