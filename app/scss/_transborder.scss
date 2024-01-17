@@ -23,6 +23,7 @@
     .wrapper{
         padding-top:75px;
         padding-left:30px;
+        height:700px;
 
         .transborder-content{
             width:695px;
@@ -167,13 +168,12 @@
         }
     }
     .wrapper{
-        //padding-left:30px;
+        padding-left:30px;
         @include breakpoints(Xlarge){
             padding-left: 0;
         }
 
         .wrapper-container{
-            //border:1px solid green;
             text-align:center;
             .about-event{
                 h3{
@@ -194,6 +194,10 @@
         
         .conference-design{
             margin-top:100px;
+
+            @include breakpoints(large){
+                margin-top:50px;
+            }
             .conference-content{
                 text-align:left;
                 h6{
@@ -209,6 +213,12 @@
                         font-weight:500;
                         font-size:28px;
                         line-height: 48px;
+                    }
+                    @include breakpoints(large){
+                        width:408.32px;
+                        font-weight: 400;
+                        font-size:25px;
+                        line-height: 45px;
                     }
                 }
                 .conference-subtitle{
@@ -226,6 +236,12 @@
                         font-weight:500;
                         font-size:12.8px;
                     }
+                    @include breakpoints(large){
+                        width:412.8px;
+                        margin-top:15px;
+                        font-size:300;
+                        font-size:12px;
+                    }
                 }
 
                 .conference-twitte{
@@ -240,6 +256,11 @@
                         @include breakpoints(Xlarge){
                             margin-left:80px;
                         }
+                        @include breakpoints(large){
+                            margin-left:50px;
+                            font-weight: 500;
+                            font-size:20px;
+                        }
 
                         &:nth-child(1){
                             margin-left:0;
@@ -249,6 +270,10 @@
                         color:#fff;
                         -webkit-text-stroke: 1px #29b3e3;
                         margin-left:10px;
+
+                        @include breakpoints(large){
+                            margin-left: 5px;
+                        }
                     }
                 }
                 .register{
@@ -269,12 +294,19 @@
                 @include breakpoints(Xlarge){
                     transform:translateX(45px);
                 }
+                @include breakpoints(large){
+                    transform:translateX(10px);
+                }
 
                 img{
                     width:318px;
                     height:226px;
                     @include breakpoints(Xlarge){
                         width:254.4px;
+                    }
+                    @include breakpoints(large){
+                        width:203.52px;
+                        height:180.8px;
                     }
 
                     &:nth-child(1){
@@ -400,62 +432,70 @@
         }
         .feature-slider{
             margin-top:55px;
-            .feature-cards{
-                width:400px;
-                height:461px;
-                margin-right:20px;
-                box-shadow:0;
-                transition:box-shadow 1s;
-                border:1px solid #fdfdfd;
-                background-color: #fdfdfd;
-                padding:30px;
 
-                @include breakpoints(Xlarge){
-                    width:321.5px;
-                    height:400px;
-                    padding:10px;
-                }
-
-                &:hover{
-                    box-shadow: 0px 0px 3px #adacac;
-                }
-
-                img{
-                    width:135px;
-                    height:135px;
-                }
-
-                h5{
-                    margin:35px 0;
-                    font-weight:600;
-                    font-size:22px;
-                    line-height:44px;
-
+            @include breakpoints(large){
+                width:680px;
+                margin:0 auto;
+                overflow-x: hidden;
+            }
+            .feature-slider-items{
+                .feature-cards{
+                    width:400px;
+                    height:461px;
+                    margin-right:20px;
+                    box-shadow:0;
+                    transition:box-shadow 1s;
+                    border:1px solid #fdfdfd;
+                    background-color: #fdfdfd;
+                    padding:30px;
+    
                     @include breakpoints(Xlarge){
-                        margin-top:20px;
-                        margin-bottom:20px;
+                        width:321.5px;
+                        height:400px;
+                        padding:10px;
                     }
-                }
-
-                p{
-                    width:320px;
-                    font-weight:400;
-                    text-align:left;
-                    font-size:13px;
-                    line-height:32.5px;
-
-                    @include breakpoints(Xlarge){
-                        width:310px;
-                        line-height: 26px;
+    
+                    &:hover{
+                        box-shadow: 0px 0px 3px #adacac;
                     }
-
-                    span{
-                        font-weight:700;
-                        text-transform: uppercase;
-                        color:#444;
+    
+                    img{
+                        width:135px;
+                        height:135px;
                     }
-                }
-            } 
+    
+                    h5{
+                        margin:35px 0;
+                        font-weight:600;
+                        font-size:22px;
+                        line-height:44px;
+    
+                        @include breakpoints(Xlarge){
+                            margin-top:20px;
+                            margin-bottom:20px;
+                        }
+                    }
+    
+                    p{
+                        width:320px;
+                        font-weight:400;
+                        text-align:left;
+                        font-size:13px;
+                        line-height:32.5px;
+    
+                        @include breakpoints(Xlarge){
+                            width:310px;
+                            line-height: 26px;
+                        }
+    
+                        span{
+                            font-weight:700;
+                            text-transform: uppercase;
+                            color:#444;
+                        }
+                    }
+                } 
+            }
         }
     }
 }
@@ -639,6 +679,11 @@
                                     font-size:15px;
                                     line-height: 18.24px;
                                 }
+                                @include breakpoints(large){
+                                    font-weight:300;
+                                    font-size:10px;
+                                    line-height: 15px;
+                                }
                             }
 
                             p{
@@ -650,6 +695,11 @@
                                     font-weight: 300;
                                     font-size:12px;
                                     line-height: 24px;
+                                }
+                                @include breakpoints(large){
+                                    font-weight: 100;
+                                    font-size:8px;
+                                    line-height: 20px;
                                 }
                             }
                         }
@@ -716,6 +766,9 @@
                     margin-left:0;
                     padding:25px;
                 }
+                @include breakpoints(large){
+                    padding:10px;
+                }
 
                 .card-title{
                     text-align:center;
@@ -742,6 +795,12 @@
                     font-weight:400;
                     font-size:18px;
                     line-height:21.09px;
+
+                    @include breakpoints(large){
+                        font-weight: 300;
+                        font-size:16px;
+                        line-height: 15px;
+                    }
 
                     &:nth-child(1){
                         margin-top:0;
@@ -799,6 +858,11 @@
         .tweet-slider{
             width:100%;
             overflow:hidden;
+
+            @include breakpoints(large){
+                width:700px;
+                margin:0 auto;
+            }
             .tweet-slide{
                 height:350px;
                 margin-top:50px;
@@ -811,7 +875,11 @@
                     margin-left:30px;
     
                     @include breakpoints(Xlarge){
+                        width:320px;
                         margin-left:15px;
+                    }
+                    @include breakpoints(large){
+                        width:340px;
                     }
     
                     &:nth-child(1){
@@ -828,7 +896,10 @@
             left:94%;
 
             @include breakpoints(Xlarge){
-                left:90%;
+                left:86%;
+            }
+            @include breakpoints(large){
+                left:83%;
             }
 
             img{
@@ -882,10 +953,18 @@
             @include breakpoints(Xlarge){
                 width:971px;
             }
+            @include breakpoints(large){
+                width:776.8px;
+            }
         }
         .video-slider{
             width:100%;
             overflow: hidden;
+
+            @include breakpoints(large){
+                width:675px;
+                margin:0 auto;
+            }
             .video-slider-content{
                 width:1214px;
                 height:202px;
